@@ -1,0 +1,6 @@
+framework module Pods_PushDemo_silent {
+  umbrella header "Pods-PushDemo_silent-umbrella.h"
+
+  export *
+  module * { export * }
+}
