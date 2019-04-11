@@ -16,6 +16,10 @@ struct Message {
 class ChatViewController: UIViewController {
     
     var arrayMessageList = [Message]()
+    var chatview  = ChatView()
+    var keyboardHeigh = 0
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +38,65 @@ class ChatViewController: UIViewController {
                         Message.init(message: "sdh wqw eqwe qw sad sadh aklshdklasghd lasdlasdg las ldasgasasd galgaelw,sdh wqw eqwe qw sad sadh aklshdklasghd lasdlasdg las ldasgasasd galgaelw", id:11),
                                         ]
         // Do any additional setup after loading the view.
+        self.chatview  = ChatView().loadView()
+        self.chatview.initView(withFrame:CGRect(x: 0, y:self.view.frame.height-50, width:self.view.frame.width, height: 50))
+        self.view.addSubview(self.chatview)
+        
+//        self.chatview.tv_message.inputAccessoryView = self.toolBar
+        
+//        self.chatview.initView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setViewHeight(notification:)), name: Notification.Name("setViewHeight"), object: nil)
+
+        
     }
     
+    //MARK: - Observer Methods
+    
+    @objc func setViewHeight(notification: Notification) {
+        // Take Action on Notification
+        print(notification)
+        
+        if let dict = notification.object as! NSDictionary? {
+            if let count = dict["count"] as? Int{
+                print("Count is :===>",count)
+                if(count<=3){self.setHeight(count: count)}
+            }
+        }
+    }
+    
+    private func setHeight(count:Int){
+        let finalHeight = CGFloat((count*30))
+        self.chatview.frame = CGRect(x: 0, y:self.view.frame.height - (finalHeight + CGFloat(self.keyboardHeigh)), width:self.view.frame.width, height: finalHeight)
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            print("notification: Keyboard will show",keyboardSize.height)
+            
+            self.keyboardHeigh = Int(keyboardSize.height)
+                
+            self.chatview.frame = CGRect(x: 0, y:self.view.frame.height-(keyboardSize.height+50), width:self.view.frame.width, height: 50)
+        }
+        
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.keyboardHeigh = 0
+            self.chatview.frame = CGRect(x: 0, y:self.view.frame.height-50, width:self.view.frame.width, height: 50)
+        }
+    }
+    
+    
+    @IBAction func btnActionHide(_ sender:UIButton)
+    {
+      self.chatview.tv_message.resignFirstResponder()
+    }
 
 
     func estimatedHeightOfLabel(text: String) -> CGFloat {

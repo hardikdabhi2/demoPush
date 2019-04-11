@@ -20,6 +20,11 @@
 		A2CC1D56225F50CC001C337F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D55225F50CC001C337F /* ChatViewController.swift */; };
 		A2CC1D5A225F5170001C337F /* MessageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D58225F516F001C337F /* MessageListCell.swift */; };
 		A2CC1D5B225F5170001C337F /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CC1D59225F5170001C337F /* MessageListCell.xib */; };
+		A2CC1D5E225F583D001C337F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D5D225F583D001C337F /* ChatView.swift */; };
+		A2CC1D60225F5846001C337F /* ChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CC1D5F225F5846001C337F /* ChatView.xib */; };
+		A2CC1D62225F59CC001C337F /* HDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D61225F59CC001C337F /* HDView.swift */; };
+		A2CC1D65225F619F001C337F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D64225F619F001C337F /* Extension.swift */; };
+		A2CC1D67225F631F001C337F /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D66225F631F001C337F /* PlaceholderTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		A2CC1D55225F50CC001C337F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A2CC1D58225F516F001C337F /* MessageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListCell.swift; sourceTree = "<group>"; };
 		A2CC1D59225F5170001C337F /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
+		A2CC1D5D225F583D001C337F /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		A2CC1D5F225F5846001C337F /* ChatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatView.xib; sourceTree = "<group>"; };
+		A2CC1D61225F59CC001C337F /* HDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDView.swift; sourceTree = "<group>"; };
+		A2CC1D64225F619F001C337F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A2CC1D66225F631F001C337F /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		AD2F3C61D8381B4D53C1EC51 /* Pods-PushDemo_silent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushDemo_silent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PushDemo_silent/Pods-PushDemo_silent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +95,7 @@
 		A2667530225C7D780033396D /* PushDemo_silent */ = {
 			isa = PBXGroup;
 			children = (
+				A2CC1D63225F618A001C337F /* Helper */,
 				A2CC1D4E225F4DD0001C337F /* View */,
 				A2CC1D4B225F4ACC001C337F /* Controllers */,
 				A2667547225C86A50033396D /* PushDemo_silent.entitlements */,
@@ -110,6 +121,8 @@
 		A2CC1D4E225F4DD0001C337F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2CC1D61225F59CC001C337F /* HDView.swift */,
+				A2CC1D5C225F5817001C337F /* MessageTextView */,
 				A2CC1D57225F5144001C337F /* MessageListCell */,
 				A2CC1D54225F4E6A001C337F /* UserListCell */,
 				A2667535225C7D780033396D /* Main.storyboard */,
@@ -133,6 +146,24 @@
 				A2CC1D59225F5170001C337F /* MessageListCell.xib */,
 			);
 			path = MessageListCell;
+			sourceTree = "<group>";
+		};
+		A2CC1D5C225F5817001C337F /* MessageTextView */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC1D5D225F583D001C337F /* ChatView.swift */,
+				A2CC1D5F225F5846001C337F /* ChatView.xib */,
+			);
+			path = MessageTextView;
+			sourceTree = "<group>";
+		};
+		A2CC1D63225F618A001C337F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC1D66225F631F001C337F /* PlaceholderTextView.swift */,
+				A2CC1D64225F619F001C337F /* Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A9D58E4F695C4771557F67D1 /* Frameworks */ = {
@@ -211,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CC1D60225F5846001C337F /* ChatView.xib in Resources */,
 				A266753C225C7D8C0033396D /* LaunchScreen.storyboard in Resources */,
 				A2CC1D5B225F5170001C337F /* MessageListCell.xib in Resources */,
 				A2667539225C7D8C0033396D /* Assets.xcassets in Resources */,
@@ -270,12 +302,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CC1D65225F619F001C337F /* Extension.swift in Sources */,
 				A2CC1D51225F4E57001C337F /* UserListCell.swift in Sources */,
 				A2667534225C7D780033396D /* ViewController.swift in Sources */,
 				A2667532225C7D780033396D /* AppDelegate.swift in Sources */,
 				A2CC1D5A225F5170001C337F /* MessageListCell.swift in Sources */,
+				A2CC1D5E225F583D001C337F /* ChatView.swift in Sources */,
 				A2CC1D56225F50CC001C337F /* ChatViewController.swift in Sources */,
+				A2CC1D62225F59CC001C337F /* HDView.swift in Sources */,
 				A2CC1D4D225F4AFA001C337F /* ListViewController.swift in Sources */,
+				A2CC1D67225F631F001C337F /* PlaceholderTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

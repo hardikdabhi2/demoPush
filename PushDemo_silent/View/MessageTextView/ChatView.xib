@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatView" customModule="PushDemo_silent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="GYI-LQ-56m">
+                    <rect key="frame" x="0.0" y="0.0" width="342" height="52"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiu-Ra-ieF" customClass="HDView" customModule="PushDemo_silent" customModuleProvider="target">
+                            <rect key="frame" x="5" y="5" width="272" height="42"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-sr-0Ij" customClass="UIPlaceholderTextView" customModule="PushDemo_silent" customModuleProvider="target">
+                                    <rect key="frame" x="5" y="3" width="262" height="36"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter message"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Eqt-Pl-laZ"/>
+                                    </connections>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="G3t-sr-0Ij" secondAttribute="bottom" constant="3" id="IlI-9J-28m"/>
+                                <constraint firstItem="G3t-sr-0Ij" firstAttribute="leading" secondItem="Aiu-Ra-ieF" secondAttribute="leading" constant="5" id="fzd-pk-tJh"/>
+                                <constraint firstAttribute="trailing" secondItem="G3t-sr-0Ij" secondAttribute="trailing" constant="5" id="lwp-Ah-cBL"/>
+                                <constraint firstItem="G3t-sr-0Ij" firstAttribute="top" secondItem="Aiu-Ra-ieF" secondAttribute="top" constant="3" id="wk5-zJ-hbm"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="masktoBound" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLW-or-54X">
+                            <rect key="frame" x="282" y="11" width="52" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="  Send  ">
+                                <color key="titleColor" red="1" green="0.0039215686269999999" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Aiu-Ra-ieF" firstAttribute="leading" secondItem="GYI-LQ-56m" secondAttribute="leading" constant="5" id="0OJ-zq-RYp"/>
+                        <constraint firstAttribute="trailing" secondItem="BLW-or-54X" secondAttribute="trailing" constant="8" id="VDN-jD-8hB"/>
+                        <constraint firstAttribute="bottom" secondItem="Aiu-Ra-ieF" secondAttribute="bottom" constant="5" id="Xd7-Mu-W6I"/>
+                        <constraint firstItem="BLW-or-54X" firstAttribute="centerY" secondItem="GYI-LQ-56m" secondAttribute="centerY" id="gMN-Tm-LeU"/>
+                        <constraint firstItem="BLW-or-54X" firstAttribute="leading" secondItem="Aiu-Ra-ieF" secondAttribute="trailing" constant="5" id="jqu-Po-5Lc"/>
+                        <constraint firstItem="Aiu-Ra-ieF" firstAttribute="top" secondItem="GYI-LQ-56m" secondAttribute="top" constant="5" id="s45-Fq-G4O"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GYI-LQ-56m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SOX-aU-pfl"/>
+                <constraint firstItem="GYI-LQ-56m" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="WcB-wH-XeA"/>
+                <constraint firstItem="GYI-LQ-56m" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="fgR-3u-X6c"/>
+                <constraint firstItem="GYI-LQ-56m" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="gV6-DQ-lS0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="toolbar" destination="Scx-rd-dAh" id="hVl-h5-qjM"/>
+                <outlet property="tv_message" destination="G3t-sr-0Ij" id="uQv-rM-mTd"/>
+            </connections>
+            <point key="canvasLocation" x="123.2" y="197.00149925037482"/>
+        </view>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Scx-rd-dAh">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="Done" id="7Px-2e-O3N">
+                    <connections>
+                        <action selector="btnActionDone:" destination="iN0-l3-epB" id="cuM-DO-O1J"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <point key="canvasLocation" x="137" y="63"/>
+        </toolbar>
+    </objects>
+</document>

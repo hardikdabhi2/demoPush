@@ -140,7 +140,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9q-CV-QrU">
-                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="VC0-38-eJ3" id="BN6-sn-4MM"/>
@@ -151,11 +151,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pU6-Vi-649" firstAttribute="trailing" secondItem="Myc-Cx-EzN" secondAttribute="trailing" id="3hy-Fh-NJo"/>
-                            <constraint firstItem="h9q-CV-QrU" firstAttribute="bottom" secondItem="Myc-Cx-EzN" secondAttribute="bottom" id="AVQ-42-nOM"/>
+                            <constraint firstItem="h9q-CV-QrU" firstAttribute="trailing" secondItem="Myc-Cx-EzN" secondAttribute="trailing" id="5Jf-0m-mVF"/>
+                            <constraint firstItem="h9q-CV-QrU" firstAttribute="leading" secondItem="Myc-Cx-EzN" secondAttribute="leading" id="5wC-vj-saI"/>
+                            <constraint firstItem="Myc-Cx-EzN" firstAttribute="bottom" secondItem="h9q-CV-QrU" secondAttribute="bottom" constant="50" id="DQz-0C-zuk"/>
                             <constraint firstItem="pU6-Vi-649" firstAttribute="top" secondItem="Myc-Cx-EzN" secondAttribute="top" id="H7g-lU-xtD"/>
-                            <constraint firstItem="h9q-CV-QrU" firstAttribute="trailing" secondItem="Myc-Cx-EzN" secondAttribute="trailing" id="HoS-05-5E3"/>
-                            <constraint firstItem="h9q-CV-QrU" firstAttribute="leading" secondItem="Myc-Cx-EzN" secondAttribute="leading" id="RAw-1F-Pm6"/>
-                            <constraint firstItem="h9q-CV-QrU" firstAttribute="top" secondItem="pU6-Vi-649" secondAttribute="bottom" id="RsX-G1-EkU"/>
+                            <constraint firstItem="h9q-CV-QrU" firstAttribute="top" secondItem="pU6-Vi-649" secondAttribute="bottom" id="bAu-Uw-NS3"/>
                             <constraint firstItem="pU6-Vi-649" firstAttribute="leading" secondItem="Myc-Cx-EzN" secondAttribute="leading" id="mKc-rd-Z7R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Myc-Cx-EzN"/>
