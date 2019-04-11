@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             NSLog("[RemoteNotification] applicationState: \(applicationStateString) didFinishLaunchingWithOptions for iOS9: \(userInfo)")
             //TODO: Handle background notification
         }
-        
+        //This is the demo project 
         return true
     }
 
