@@ -15,6 +15,11 @@
 		A266753C225C7D8C0033396D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A266753A225C7D8C0033396D /* LaunchScreen.storyboard */; };
 		A2667546225C866B0033396D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2667545225C866B0033396D /* GoogleService-Info.plist */; };
 		A2CC1D4D225F4AFA001C337F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D4C225F4AFA001C337F /* ListViewController.swift */; };
+		A2CC1D51225F4E57001C337F /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D4F225F4E57001C337F /* UserListCell.swift */; };
+		A2CC1D52225F4E57001C337F /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CC1D50225F4E57001C337F /* UserListCell.xib */; };
+		A2CC1D56225F50CC001C337F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D55225F50CC001C337F /* ChatViewController.swift */; };
+		A2CC1D5A225F5170001C337F /* MessageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC1D58225F516F001C337F /* MessageListCell.swift */; };
+		A2CC1D5B225F5170001C337F /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CC1D59225F5170001C337F /* MessageListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		A2667545225C866B0033396D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2667547225C86A50033396D /* PushDemo_silent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushDemo_silent.entitlements; sourceTree = "<group>"; };
 		A2CC1D4C225F4AFA001C337F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		A2CC1D4F225F4E57001C337F /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		A2CC1D50225F4E57001C337F /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
+		A2CC1D55225F50CC001C337F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A2CC1D58225F516F001C337F /* MessageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListCell.swift; sourceTree = "<group>"; };
+		A2CC1D59225F5170001C337F /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
 		AD2F3C61D8381B4D53C1EC51 /* Pods-PushDemo_silent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushDemo_silent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PushDemo_silent/Pods-PushDemo_silent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,9 +85,9 @@
 		A2667530225C7D780033396D /* PushDemo_silent */ = {
 			isa = PBXGroup;
 			children = (
+				A2CC1D4E225F4DD0001C337F /* View */,
 				A2CC1D4B225F4ACC001C337F /* Controllers */,
 				A2667547225C86A50033396D /* PushDemo_silent.entitlements */,
-				A2667535225C7D780033396D /* Main.storyboard */,
 				A2667538225C7D8C0033396D /* Assets.xcassets */,
 				A266753A225C7D8C0033396D /* LaunchScreen.storyboard */,
 				A266753D225C7D8D0033396D /* Info.plist */,
@@ -92,8 +102,37 @@
 				A2667531225C7D780033396D /* AppDelegate.swift */,
 				A2667533225C7D780033396D /* ViewController.swift */,
 				A2CC1D4C225F4AFA001C337F /* ListViewController.swift */,
+				A2CC1D55225F50CC001C337F /* ChatViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A2CC1D4E225F4DD0001C337F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC1D57225F5144001C337F /* MessageListCell */,
+				A2CC1D54225F4E6A001C337F /* UserListCell */,
+				A2667535225C7D780033396D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2CC1D54225F4E6A001C337F /* UserListCell */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC1D4F225F4E57001C337F /* UserListCell.swift */,
+				A2CC1D50225F4E57001C337F /* UserListCell.xib */,
+			);
+			path = UserListCell;
+			sourceTree = "<group>";
+		};
+		A2CC1D57225F5144001C337F /* MessageListCell */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC1D58225F516F001C337F /* MessageListCell.swift */,
+				A2CC1D59225F5170001C337F /* MessageListCell.xib */,
+			);
+			path = MessageListCell;
 			sourceTree = "<group>";
 		};
 		A9D58E4F695C4771557F67D1 /* Frameworks */ = {
@@ -173,7 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A266753C225C7D8C0033396D /* LaunchScreen.storyboard in Resources */,
+				A2CC1D5B225F5170001C337F /* MessageListCell.xib in Resources */,
 				A2667539225C7D8C0033396D /* Assets.xcassets in Resources */,
+				A2CC1D52225F4E57001C337F /* UserListCell.xib in Resources */,
 				A2667546225C866B0033396D /* GoogleService-Info.plist in Resources */,
 				A2667537225C7D780033396D /* Main.storyboard in Resources */,
 			);
@@ -229,8 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CC1D51225F4E57001C337F /* UserListCell.swift in Sources */,
 				A2667534225C7D780033396D /* ViewController.swift in Sources */,
 				A2667532225C7D780033396D /* AppDelegate.swift in Sources */,
+				A2CC1D5A225F5170001C337F /* MessageListCell.swift in Sources */,
+				A2CC1D56225F50CC001C337F /* ChatViewController.swift in Sources */,
 				A2CC1D4D225F4AFA001C337F /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
